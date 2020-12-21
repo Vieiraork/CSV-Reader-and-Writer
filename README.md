@@ -9,6 +9,10 @@ Python 3.8.2
 ## How to run this application
 
 1. Inside of **File.py** change the attribute **self.file_name** for name of your file
+  ```
+        def __init__(self):
+          self.file_name = 'name of your file'
+  ```
 2. Inside of **File.py** in function **create_file** change the line what contains **writer.writerow**
   ```
         def create_file(self):
