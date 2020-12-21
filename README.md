@@ -6,7 +6,7 @@ This project is a simple csv manipulator in python.
 
 Python 3.8.2
 
-## How to run this application
+## How to run
 
 1. Inside of **File.py** change the attribute **self.file_name** for name of your file
   ```
