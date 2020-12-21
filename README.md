@@ -10,7 +10,6 @@ Python 3.8.2
 
 1. Inside of **File.py** change the attribute **self.file_name** for name of your file
 2. Inside of **File.py** in function **create_file** change the line what contains **writer.writerow**
-  1 This attribute are the columns name of first line of your CSV file
   ```
         def create_file(self):
           with open(self.file_name, 'x', newline='') as csv_file:
@@ -23,7 +22,6 @@ Python 3.8.2
         csv_file.close()
   ```
 3. In **File.py** inside of write function you have to edit the vaiables to set the structure of your file
-  1. Here you change the number of attributes to insert in writerow function
   ```
         def write(self):
           name = input('Type your name: ')
