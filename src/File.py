@@ -1,5 +1,4 @@
 import csv
-import os
 from src import Input_options
 
 
