@@ -25,7 +25,7 @@ Python 3.8.2
 
         csv_file.close()
   ```
-3. In **File.py** inside of write function you have to edit the vaiables to set the structure of your file
+3. In **File.py** inside of **write** function you have to edit the vaiables to set the structure of your file
   ```
         def write(self):
           name = input('Type your name: ')
