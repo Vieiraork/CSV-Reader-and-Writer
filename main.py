@@ -20,8 +20,8 @@ if __name__ == '__main__':
             if options == 1:
                 file.write()
             elif options == 2:
-                file.read()
+                file.reader()
             elif options == 3:
                 break
-            else:
-                print('Error: invalid option')
+        else:
+            print('Error: invalid option')
