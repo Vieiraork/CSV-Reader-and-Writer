@@ -4,7 +4,7 @@ from src import Input_options
 
 class File_CSV:
     def __init__(self):
-        self.file_name = 'Ex1'
+        self.file_name = 'Ex1.CSV'
         self.index_columns = []
         self.values = []
         self.samples = []
@@ -22,20 +22,18 @@ class File_CSV:
             # Here type a first line of your csv file
             # Type inside of a list
             writer.writerow(self.index_columns)
-
-            self.samples = ['Sample'] * self.columns_number
-            writer.writerow(self.samples)
-
             csv_file.close()
 
     def write(self):
         with open(self.file_name, 'a', newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=';')
 
-            new = self.reader(length=True)
+            cl = self.reader_txt()
+            nl = cl.replace(';', ' ').split()
 
-            for items in range(new):
-                self.values.append(input(f'Type {items + 1} value: '))
+            self.line()
+            for items in nl:
+                self.values.append(input(f'Type {items} value: '))
 
             writer.writerow(self.values)
             self.values.clear()
@@ -54,3 +52,13 @@ class File_CSV:
                     print(row)
 
             csv_file.close()
+
+    def reader_txt(self):
+        with open(self.file_name, 'r') as txt_file:
+            file = txt_file.readlines()
+
+            for row in file:
+                return row
+
+    def line(self):
+        print('-' * 60)
