@@ -28,11 +28,10 @@ class File_CSV:
         with open(self.file_name, 'a', newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=';')
 
-            cl = self.reader_txt()
-            nl = cl.replace(';', ' ').split()
+            first_line = self.reader_txt().replace(';', ' ').split()
 
             self.line()
-            for items in nl:
+            for items in first_line:
                 self.values.append(input(f'Type {items} value: '))
 
             writer.writerow(self.values)
