@@ -40,16 +40,13 @@ class File_CSV:
 
             csv_file.close()
 
-    def reader(self, length=False):
+    def reader(self):
         with open(self.file_name, 'r') as csv_file:
             reader = csv.reader(csv_file, delimiter=';')
 
             reader.__next__()
             for row in reader:
-                if length:
-                    return len(row)
-                else:
-                    print(row)
+                print(row)
 
             csv_file.close()
 
