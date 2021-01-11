@@ -54,6 +54,8 @@ class File_CSV:
         with open(self.file_name, 'r') as txt_file:
             file = txt_file.readlines()
 
+            txt_file.close()
+
             for first_row in file:
                 return first_row
 
