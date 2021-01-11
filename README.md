@@ -5,6 +5,7 @@ This project is a simple csv manipulator in python.
 ## Tecnologies
 
 Python 3.8.2
+csv built-in package
 
 ## How to run
 
