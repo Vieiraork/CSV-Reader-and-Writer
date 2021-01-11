@@ -7,7 +7,6 @@ class File_CSV:
         self.file_name = 'Ex1.csv'
         self.index_columns = []
         self.values = []
-        self.samples = []
         self.first_line = []
         self.columns_number = None
 
@@ -55,8 +54,8 @@ class File_CSV:
         with open(self.file_name, 'r') as txt_file:
             file = txt_file.readlines()
 
-            for row in file:
-                return row
+            for first_row in file:
+                return first_row
 
     def line(self):
         print('-' * 60)
