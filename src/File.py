@@ -4,10 +4,11 @@ from src import Input_options
 
 class File_CSV:
     def __init__(self):
-        self.file_name = 'Ex1.CSV'
+        self.file_name = 'Ex1.csv'
         self.index_columns = []
         self.values = []
         self.samples = []
+        self.first_line = []
         self.columns_number = None
 
     def create_file(self):
@@ -28,10 +29,11 @@ class File_CSV:
         with open(self.file_name, 'a', newline='') as csv_file:
             writer = csv.writer(csv_file, delimiter=';')
 
-            first_line = self.reader_txt().replace(';', ' ').split()
+            if len(self.first_line) < 1:
+                self.first_line = self.reader_txt().replace(';', ' ').split()
 
             self.line()
-            for items in first_line:
+            for items in self.first_line:
                 self.values.append(input(f'Type {items} value: '))
 
             writer.writerow(self.values)
