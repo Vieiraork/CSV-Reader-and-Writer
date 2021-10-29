@@ -24,7 +24,7 @@ if __name__ == '__main__':
     while True:
         print(menu)
 
-        options = input_options.read_int(msg='Type a option')
+        options = input_options.read_int(msg='Type a option: ')
 
         if list_options.__contains__(options):
             if options == 1:
