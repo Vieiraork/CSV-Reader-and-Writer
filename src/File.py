@@ -52,7 +52,7 @@ class File:
 
             csv_file.close()
 
-    def reader_txt(self) -> None:
+    def reader_txt(self) -> list(str):
         with open(self.file_name, 'r') as txt_file:
             file = txt_file.readlines()
 
